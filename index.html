@@ -8,56 +8,120 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <!-- This means that the order here is very important. Putting our customs stylesheet "css/styles.css" 
+        after the bootstrap stylesheet "css/bootstrap.min.css" will overide the bootstrap stylesheet correctly-->
+        <!-- For more about google fonts, visit fonts.google.com -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>NuCamp: A Better Way To Camp</title>
 </head>
 
 <body>
-
-    <header>
-        <div>
-            <h1>NuCamp</h1>
-            <h2>a better way to camp</h2>
+    <!-- We put the "jumbotron-fluid" here to remove the border radius -->
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row"> 
+                <div class="col">
+                    <h1>NuCamp</h1>
+                    <h2>a better way to camp</h2>
+                </div>   
+            </div>    
         </div>
     </header>
-
-    <div>
-        <h2>Discover & Review</h2>
-        <h3>Our Campsites</h3>
-        <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+<!-- -->
+<!-- We are just using HTML nav element and no Bootstrap. -->
+<!-- Now, we transform this into a Bootstrap navbar component. First, we add the navbar class to the nav element.-->
+<!-- This is the base class for navbar component. Most component have a base class that you have to add
+    before you can use any of the other classes for that component.-->
+<!-- Next we add navbar-expand-sm class. Then we give ul a navbar-nav class. Which together will cause navbar to
+     expand horizontally for sm and up viewpots, and stacked vertically on xs, which is the default list style -->
+    <!-- Then, to each of the list item, we add nav-item class which will help with the appearance-->
+     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav">
+                    <!-- And because we are on the Homepage, we add the active class to this one-->
+                    <!-- The next step is to add a nav-link class to each of the anchor elements -->
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- "align-items-center" class is use on rows. It will center all the columns inside that row
+         vertically. Couple of them are "align-items-start" and "align-items-end" -->
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <!-- On small and up viewports when this column is pulled to the rigt, 
+                    the text here is also aligned to the right by using responsive bootstrap class "text-sm-right" -->
+                <h2 class="text-sm-right">Discover & Review</h2>
+            </div>
+            <div class="col">
+                <h3>Our Campsites</h3>
+            <!-- We use "d-none d-sm-block" bootstrap responsive class to hide the contents of "p" elements only on extra small screens sizes -->
+                <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <h2>Featured Campsites</h2>
-        <h3>React Lake Campground</h3>
-        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+    <div class="container">
+        <!-- If you want to change the vertical alignment of a single column, use "align-self". 
+            Read more on Bootstrap documentation. -->
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+                <h2>Featured Campsites</h2>
+            </div>
+            <div class="col">
+                <h3>React Lake Campground</h3>
+                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+            </div>
+        </div>  
     </div>
 
-    <div>
-        <h2>Our Community Partners</h2>
-        <h3>Bootstrap Outfitters</h3>
-        <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2 class="text-sm-right">Our Community Partners</h2>
+            </div>
+            <div class="col">
+                <h3>Bootstrap Outfitters</h3>
+                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+            </div>
+        </div>   
     </div>
 
     <footer>
-        <div>
-            <h5>Links</h5>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sites</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <h5>Social</h5>
-            <a href="http://instagram.com/">Instagram</a>
-            <a href="http://facebook.com/">Facebook</a>
-            <a href="http://twitter.com/">Twitter</a>
-            <a href="http://youtube.com/">YouTube</a>
-        </div>
-        <div>
-            Tel: 1-206-555-1234<br />
-            Email: campsites@nucamp.co
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Sites</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a href="http://instagram.com/">Instagram</a>
+                    <a href="http://facebook.com/">Facebook</a>
+                    <a href="http://twitter.com/">Twitter</a>
+                    <a href="http://youtube.com/">YouTube</a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    Tel: 1-206-555-1234<br />
+                    Email: campsites@nucamp.co
+                </div>
+            </div>
         </div>
     </footer>
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
