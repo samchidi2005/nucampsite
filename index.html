@@ -34,8 +34,8 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div> 
-                <div class="col-xs-12 col-md-4 col-xl-2">   
-                    <a class="btn btn-info" href="#reserveForm" role="button">Reserve Campsite</a>
+                <div class="col-md-4 col-xl-2 mt-4">   
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
                 </div>  
             </div>    
         </div>
@@ -199,8 +199,24 @@
     </footer>
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <!-- Popper is a library that is required for pop over, tool tips and most drop down menus
+    in Bootstrap. Tool tips are opt in and won't work on a page without first being initialized
+    for perfomance reasons. So we need to add some Javascript in the form of JQuery that Bootstrap
+    provides to initialize tooltips.-->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Lets add that here, below the links script. This is the JQuery's method that activates
+    all the tooltips for this page. -->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <!-- Next, we will add the actual tooltips to the button for the Reserve Campsite form
+        which is using an anchor element. The tooltip component isn't built using classes, 
+        instead, it built using custom data attribute. The first one we will add is "data-toggle"
+    -->
 </body>
 
 </html>
