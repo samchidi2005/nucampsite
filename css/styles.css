@@ -1,57 +1,58 @@
 body {
-    /* If browser fails to load "Open Sans", then it will use "sans-serif" */
-    font-family: "Open Sans", sans-serif;
-}
+  /* If browser fails to load "Open Sans", then it will use "sans-serif" */
+  font-family: "Open Sans", sans-serif; }
 
 h1, h2, h3 {
-    /* Apply these Lobster and cursive to these three html elements */
-    font-family: "Lobster", cursive;
-}
+  /* Apply these Lobster and cursive to these three html elements */
+  font-family: "Lobster", cursive; }
 
 h2 {
-    color: #3046C5;
+  color: #3046C5; }
+
+/*
+SASS Nesting supports us to nest or target children or grand children node of parent(header) element,
+just like the example below, but CSS doesn't support nesting like this currently.
+
+header {
+    h2 {
+        color: $color-pale;
+    }
+    p  {
+        color: $color-secondary;
+    }
 }
+*/
 
 header h2 {
-    color: #CEC8FF;
-}
+  color: #CEC8FF; }
 
 .site-footer {
-    background-image: linear-gradient(#b7a8f8, white);
-    padding: 20px 0px;
-}
+  background-image: linear-gradient(#CEC8FF, white);
+  padding: 20px 0px; }
 
 .jumbotron {
-    margin: 0; /* We set margin to 0 here so we can remove space between jumbotron and navbar */
-    padding: 30px;
-    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
-    /* We will set default color to white */
-    color: white;
-}
+  margin: 0;
+  /* We set margin to 0 here so we can remove space between jumbotron and navbar */
+  padding: 30px;
+  background-image: linear-gradient(to right, #5637dd, #3046C5, #60106b);
+  /* We will set default color to white */
+  color: white; }
 
 .row-content {
-    padding: 50px 0;
-    border-bottom: 1px ridge;
-    min-height: 200px;
-}
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px; }
 
 .navbar-dark {
-    background-color: #901CAD;
-}
+  background-color: #901CAD; }
 
 .carousel-caption {
-    /* Using rgba, I can specify color with the first three numbers. E.g 0, 0, 0 is black, 
-    then the last number is opaque channel of which setting it to 1 is 100% opaque black 
-    and to 0.5 is 50% black and rest transparent*/
-    background-color: rgba(0, 0, 0, 0.5);
-}
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .carousel {
-    border: solid #5637DD;
-}
+  border: solid #5637dd; }
 
 #carouselButton {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
+  position: absolute;
+  right: 0;
+  bottom: 0; }

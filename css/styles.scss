@@ -1,0 +1,79 @@
+$color-primary: #3046C5;
+$color-secondary: #5637dd;
+$color-pale: #CEC8FF;
+$color-mid: #901CAD;
+$color-dark: #60106b;
+$color-transparent-black: rgba(0, 0, 0, 0.5);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
+body {
+    /* If browser fails to load "Open Sans", then it will use "sans-serif" */
+    font-family: $body-font;
+}
+
+h1, h2, h3 {
+    /* Apply these Lobster and cursive to these three html elements */
+    font-family: $header-font;
+}
+
+h2 {
+    color: $color-primary;
+}
+
+/*
+SASS Nesting supports us to nest or target children or grand children node of parent(header) element,
+just like the example below, but CSS doesn't support nesting like this currently.
+
+header {
+    h2 {
+        color: $color-pale;
+    }
+    p  {
+        color: $color-secondary;
+    }
+}
+
+*/
+
+header h2 {
+    color: $color-pale;
+}
+
+.site-footer {
+    background-image: linear-gradient($color-pale, white);
+    padding: 20px 0px;
+}
+
+.jumbotron {
+    margin: 0; /* We set margin to 0 here so we can remove space between jumbotron and navbar */
+    padding: 30px;
+    background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
+    /* We will set default color to white */
+    color: white;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar-dark {
+    background-color: $color-mid;
+}
+
+.carousel-caption {
+    background-color: $color-transparent-black;
+}
+
+.carousel {
+    border: solid $color-secondary;
+}
+
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
