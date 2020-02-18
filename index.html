@@ -5,18 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-
-    <!-- This means that the order here is very important. Putting our customs stylesheet "css/styles.css" 
-        after the bootstrap stylesheet "css/bootstrap.min.css" will overide the bootstrap stylesheet correctly-->
-        <!-- For more about google fonts, visit fonts.google.com -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
     <title>NuCamp: A Better Way To Camp</title>
 </head>
@@ -314,15 +309,13 @@
         </div>
     </footer>
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <!-- Popper is a library that is required for pop over, tool tips and most drop down menus
-    in Bootstrap. Tool tips are opt in and won't work on a page without first being initialized
-    for perfomance reasons. So we need to add some Javascript in the form of JQuery that Bootstrap
-    provides to initialize tooltips.-->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
     <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+
 </body>
 
 </html>
