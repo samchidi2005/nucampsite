@@ -12,3 +12,18 @@ $(function() {
          }
     }); 
  });
+
+ $(function() {
+    $("#reserveButton").click(function() {
+       $("#reserveModal").modal("show");
+    });
+    $("#closeButton").click(function() {
+       $("#reserveModal").modal("hide");
+    });
+    $("#loginButton").click(function() {
+       $("#loginModal").modal("show");
+    });
+    $("#closeLoginModal").click(function() {
+       $("#loginModal").modal("hide");
+    });
+});

@@ -13,7 +13,7 @@
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
-    <title>NuCamp: A Better Way To Camp</title>
+    <title>Afri-Cuisine: A Better Place To Eat</title>
 </head>
 
 <body>
@@ -26,11 +26,11 @@
                    <img src="img/logo.png" class="img-fluid" /> 
                 </div>
                 <div class="col">
-                    <h1>NuCamp</h1>
-                    <h2>a better way to camp</h2>
+                    <h1>Afri-Cuisine</h1>
+                    <h2>a better place to eat</h2>
                 </div> 
                 <div class="col-md-4 col-xl-2 mt-4">  
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</button> 
+                    <button type="button" class="btn btn-info" id="reserveButton">Reserve Table</button>
                 </div>  
             </div>    
         </div>
@@ -41,7 +41,7 @@
             <div class="modal-content">
                 <div class="modal-header bg-info text-white">
                     <h3 class="modal-title">Reserve a Campsite</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="closeButton">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -89,14 +89,7 @@
             </div>
         </div>
     </div>
-<!-- -->
-<!-- We are just using HTML nav element and no Bootstrap. -->
-<!-- Now, we transform this into a Bootstrap navbar component. First, we add the navbar class to the nav element.-->
-<!-- This is the base class for navbar component. Most component have a base class that you have to add
-    before you can use any of the other classes for that component.-->
-<!-- Next we add navbar-expand-sm class. Then we give ul a navbar-nav class. Which together will cause navbar to
-     expand horizontally for sm and up viewpots, and stacked vertically on xs, which is the default list style -->
-    <!-- Then, to each of the list item, we add nav-item class which will help with the appearance-->
+
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <!-- We will add the smaller version of the logo this navbar and get rid of ml-auto from the button-->
@@ -106,18 +99,13 @@
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
-                    <!-- And because we are on the Homepage, we add the active class to this one-->
-                    <!-- The next step is to add a nav-link class to each of the anchor elements -->
-                    <!-- To include font awesome here, we first include inline html element "i", 
-                        then include "fa" as a base class, the class name of the icon that we want 
-                        and its' sizing class -->
                     <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html"><i class="fa fa-list fa-lg"></i> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                    <a role="button" id="loginButton">
                         <i class="fa fa-sign-in"></i> Login
                     </a>
                 </span>
@@ -130,7 +118,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Login</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="closeLoginModal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -285,7 +273,7 @@
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
                         <li><a href="aboutus.html">About</a></li>
-                        <li><a href="#">Sites</a></li>
+                        <li><a href="menu.html">Menu</a></li>
                         <li><a href="contactus.html">Contact</a></li>
                     </ul>
                 </div>
@@ -303,7 +291,7 @@
                 </div>
                 <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
-                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o"></i> email@afcuisine.co</a>
                 </div>
             </div>
         </div>

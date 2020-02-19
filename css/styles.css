@@ -2,12 +2,15 @@ body {
   /* If browser fails to load "Open Sans", then it will use "sans-serif" */
   font-family: "Open Sans", sans-serif; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   /* Apply these Lobster and cursive to these three html elements */
   font-family: "Lobster", cursive; }
 
-h2 {
-  color: #3046C5; }
+header h3 {
+  color: #CEC8FF; }
+
+h5 {
+  color: black; }
 
 /*
 SASS Nesting supports us to nest or target children or grand children node of parent(header) element,
@@ -23,9 +26,6 @@ header {
 }
 
 */
-header h2 {
-  color: #CEC8FF; }
-
 .site-footer {
   background-image: linear-gradient(#CEC8FF, white);
   padding: 20px 0px; }
@@ -56,3 +56,9 @@ header h2 {
   position: absolute;
   right: 0;
   bottom: 0; }
+
+#reserveModal modal-header {
+  color: #17A2B8; }
+
+#loginModal modal-header {
+  color: #901CAD; }
