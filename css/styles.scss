@@ -5,6 +5,8 @@ $color-pale: #CEC8FF;
 $color-mid: #901CAD;
 $color-dark: #60106b;
 $color-transparent-black: rgba(0, 0, 0, 0.5);
+$color-black: black;
+$color-darkblue: #222777;
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
@@ -14,13 +16,17 @@ body {
     font-family: $body-font;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     /* Apply these Lobster and cursive to these three html elements */
     font-family: $header-font;
 }
 
-h2 {
-    color: $color-primary;
+header h3 {
+    color: $color-pale;
+}
+
+h5 {   
+    color: $color-black;
 }
 
 /*
@@ -37,10 +43,6 @@ header {
 }
 
 */
-
-header h2 {
-    color: $color-pale;
-}
 
 .site-footer {
     background-image: linear-gradient($color-pale, white);
@@ -80,14 +82,14 @@ header h2 {
 }
 
 #reserveModal {
- .modal-header {
+    .modal-header {
         background-color: $color-teal;
         color: white;
     }
 }
 
 #loginModal {
- .modal-header {
+    .modal-header {
         background-color: $color-mid;
         color: white;
     }
